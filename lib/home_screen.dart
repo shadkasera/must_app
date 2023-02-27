@@ -7,9 +7,9 @@ class home_screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
+      child: Scaffold( backgroundColor: Colors.grey[300],
           appBar: AppBar(
-            backgroundColor: Colors.grey,
+            backgroundColor: Colors.blue[400],
             elevation: 10,
             leading: IconButton(
               icon: const Icon(
@@ -36,11 +36,11 @@ class home_screen extends StatelessWidget {
                 RichText(
                   text: const TextSpan(
                     text: 'WELCOME! \n\n',
-                    style: TextStyle(fontSize: 24, color: Colors.black),
+                    style: TextStyle(fontSize: 24, color: Colors.black,),
                     children: [
                       TextSpan(
                         text:
-                            'MUST timetables have been put in different of view. You can view a timetable by room, Lecturer or class. Proceed to view your preffered timetable by the type from the buttons below.',
+                            'MUST timetables have been put in different categories of view. You can view a timetable by room, Lecturer or class. Proceed to view your preffered timetable by the type from the buttons below.',
                         style: TextStyle(fontSize: 20, color: Colors.black),
                       ),
                     ],
@@ -152,6 +152,12 @@ class home_screen extends StatelessWidget {
                       ),
                     )),
                 const SizedBox(height: 20),
+                const Divider(
+                  height: 20,
+                  thickness: 2,
+                  indent: BorderSide.strokeAlignCenter,
+                  color: Colors.black,
+                )
               ],
             ),
           )),

@@ -7,7 +7,8 @@ class home_screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold( backgroundColor: Colors.grey[300],
+      child: Scaffold(
+          backgroundColor: Colors.grey[300],
           appBar: AppBar(
             backgroundColor: Colors.blue[400],
             elevation: 10,
@@ -21,6 +22,16 @@ class home_screen extends StatelessWidget {
                 // handle the press
               },
             ),
+           actions: [
+          IconButton(
+            icon: const Icon(Icons.settings),
+            color: Colors.white,
+            onPressed: () {
+              // do something when the icon is pressed
+            },
+          ),
+        ],
+
             title: const Text(
               'MUST TIMETABLE',
               style: TextStyle(color: Colors.white),
@@ -36,7 +47,10 @@ class home_screen extends StatelessWidget {
                 RichText(
                   text: const TextSpan(
                     text: 'WELCOME! \n\n',
-                    style: TextStyle(fontSize: 24, color: Colors.black,),
+                    style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black,
+                    ),
                     children: [
                       TextSpan(
                         text:

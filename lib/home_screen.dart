@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:must_app/room_screen.dart';
 
 // ignore: camel_case_types
 class home_screen extends StatelessWidget {
@@ -65,16 +66,29 @@ class home_screen extends StatelessWidget {
                     ),
                   ),
                   ListTile(
-                    leading: const Icon(Icons.house_sharp, color: Colors.white,),
+                    leading: const Icon(
+                      Icons.house_sharp,
+                      color: Colors.white,
+                    ),
                     title: const Text(
                       'ROOMS',
                       style: TextStyle(color: Colors.white),
                     ),
                     onTap: () {
-                      // Handle drawer item tap
+                      //Navigator.push(context, MaterialPageRoute(builder: context.(context) => room_screen));
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const room_screen(),
+                        ),
+                      );
                     },
                   ),
-                  ListTile( leading: const Icon(Icons.people_alt_sharp, color: Colors.white,),
+                  ListTile(
+                    leading: const Icon(
+                      Icons.people_alt_sharp,
+                      color: Colors.white,
+                    ),
                     title: const Text(
                       'LECTURERS',
                       style: TextStyle(color: Colors.white),
@@ -83,7 +97,11 @@ class home_screen extends StatelessWidget {
                       // code to handle item 2
                     },
                   ),
-                  ListTile(leading: const Icon(Icons.school, color: Colors.white,),
+                  ListTile(
+                    leading: const Icon(
+                      Icons.school,
+                      color: Colors.white,
+                    ),
                     title: const Text(
                       'PROGRAMS',
                       style: TextStyle(color: Colors.white),
@@ -92,8 +110,12 @@ class home_screen extends StatelessWidget {
                       // code to handle item 1
                     },
                   ),
-                  ListTile(leading: const Icon(Icons.house_siding, color: Colors.white,),
-                    title: const Text( 
+                  ListTile(
+                    leading: const Icon(
+                      Icons.house_siding,
+                      color: Colors.white,
+                    ),
+                    title: const Text(
                       'FREE ROOMS',
                       style: TextStyle(color: Colors.white),
                     ),
@@ -132,7 +154,14 @@ class home_screen extends StatelessWidget {
                 Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const room_screen(),
+                          ),
+                        );
+                      },
                       style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all<Color>(Colors.blue),
@@ -158,7 +187,14 @@ class home_screen extends StatelessWidget {
                 Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                         Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const room_screen(),
+                          ),
+                        );
+                      },
                       style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all<Color>(Colors.blue),
@@ -184,7 +220,14 @@ class home_screen extends StatelessWidget {
                 Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                         Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const room_screen(),
+                          ),
+                        );
+                      },
                       style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all<Color>(Colors.blue),
@@ -210,7 +253,14 @@ class home_screen extends StatelessWidget {
                 Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                         Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const room_screen(),
+                          ),
+                        );
+                      },
                       style: ButtonStyle(
                         backgroundColor:
                             MaterialStateProperty.all<Color>(Colors.blue),

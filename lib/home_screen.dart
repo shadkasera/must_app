@@ -15,7 +15,7 @@ class home_screen extends StatelessWidget {
             elevation: 10,
             actions: [
               IconButton(
-                icon: const Icon(Icons.settings),
+                icon: const Icon(Icons.search),
                 onPressed: () {
                   // do something when the icon is pressed
                 },
@@ -65,15 +65,16 @@ class home_screen extends StatelessWidget {
                     ),
                   ),
                   ListTile(
+                    leading: const Icon(Icons.house_sharp, color: Colors.white,),
                     title: const Text(
                       'ROOMS',
                       style: TextStyle(color: Colors.white),
                     ),
                     onTap: () {
-                      // code to handle item 1
+                      // Handle drawer item tap
                     },
                   ),
-                  ListTile(
+                  ListTile( leading: const Icon(Icons.people_alt_sharp, color: Colors.white,),
                     title: const Text(
                       'LECTURERS',
                       style: TextStyle(color: Colors.white),
@@ -82,17 +83,17 @@ class home_screen extends StatelessWidget {
                       // code to handle item 2
                     },
                   ),
-                  ListTile(
+                  ListTile(leading: const Icon(Icons.school, color: Colors.white,),
                     title: const Text(
-                      'ROOMS',
+                      'PROGRAMS',
                       style: TextStyle(color: Colors.white),
                     ),
                     onTap: () {
                       // code to handle item 1
                     },
                   ),
-                  ListTile(
-                    title: const Text(
+                  ListTile(leading: const Icon(Icons.house_siding, color: Colors.white,),
+                    title: const Text( 
                       'FREE ROOMS',
                       style: TextStyle(color: Colors.white),
                     ),
@@ -114,14 +115,14 @@ class home_screen extends StatelessWidget {
                   text: const TextSpan(
                     text: 'WELCOME! \n\n',
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 34,
                       color: Colors.black,
                     ),
                     children: [
                       TextSpan(
                         text:
                             'MUST timetables have been put in different categories of view. You can view a timetable by room, Lecturer or class. Proceed to view your preffered timetable by the type from the buttons below.',
-                        style: TextStyle(fontSize: 20, color: Colors.black),
+                        style: TextStyle(fontSize: 24, color: Colors.black),
                       ),
                     ],
                   ),

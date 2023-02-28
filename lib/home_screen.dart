@@ -10,14 +10,14 @@ class home_screen extends StatelessWidget {
       child: Scaffold(
           backgroundColor: Colors.grey[300],
           appBar: AppBar(
+            iconTheme: const IconThemeData(color: Colors.white),
             backgroundColor: Colors.blue,
             elevation: 10,
             actions: [
               IconButton(
                 icon: const Icon(Icons.settings),
-                color: Colors.white,
                 onPressed: () {
-                   Scaffold.of(context).openDrawer();// do something when the icon is pressed
+                  // do something when the icon is pressed
                 },
               ),
             ],
@@ -27,17 +27,81 @@ class home_screen extends StatelessWidget {
             ),
             centerTitle: true,
           ),
-          drawer: Drawer(
-            child: ListView(
-              children: const [
-                DrawerHeader(child: Text('header')),
-                ListTile(
-                  title: Text('item1'),
-                ),
-                ListTile(
-                  title: Text('item2'),
-                )
-              ],
+          drawer: SizedBox(
+            width: 200, // set a fixed width for the drawer
+            child: Drawer(
+              backgroundColor: Colors.grey,
+              child: ListView(
+                padding: EdgeInsets.zero,
+                children: [
+                  // ignore: avoid_unnecessary_containers
+                  SizedBox(
+                    height: 200,
+                    child: DrawerHeader(
+                      decoration: const BoxDecoration(
+                        color: Colors.blue,
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        // ignore: prefer_const_literals_to_create_immutables
+                        children: [
+                          const CircleAvatar(
+                            radius: 30,
+                            backgroundImage: AssetImage(
+                              'assets/images/must_logo.jpeg',
+                            ),
+                          ),
+                          // ignore: prefer_const_constructors
+                          SizedBox(height: 18),
+                          const Text(
+                            'MUST TIMETABLE',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  ListTile(
+                    title: const Text(
+                      'ROOMS',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    onTap: () {
+                      // code to handle item 1
+                    },
+                  ),
+                  ListTile(
+                    title: const Text(
+                      'LECTURERS',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    onTap: () {
+                      // code to handle item 2
+                    },
+                  ),
+                  ListTile(
+                    title: const Text(
+                      'ROOMS',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    onTap: () {
+                      // code to handle item 1
+                    },
+                  ),
+                  ListTile(
+                    title: const Text(
+                      'FREE ROOMS',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    onTap: () {
+                      // code to handle item 1
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
           body: Padding(
@@ -81,7 +145,7 @@ class home_screen extends StatelessWidget {
                       child: const Padding(
                         padding: EdgeInsets.symmetric(vertical: 12.0),
                         child: Text(
-                          '   SELECT ROOM  ',
+                          '   VIEW  ROOM TIMETABLE   ',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 20.0,
@@ -107,7 +171,7 @@ class home_screen extends StatelessWidget {
                       child: const Padding(
                         padding: EdgeInsets.symmetric(vertical: 12.0),
                         child: Text(
-                          'SELECT LECTURER',
+                          'VIEW LECTURER TIMETABLE',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 20.0,
@@ -133,7 +197,7 @@ class home_screen extends StatelessWidget {
                       child: const Padding(
                         padding: EdgeInsets.symmetric(vertical: 12.0),
                         child: Text(
-                          '   SELECT CLASS   ',
+                          ' VIEW PROGRAM TIMETABLE',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 20.0,
@@ -159,7 +223,7 @@ class home_screen extends StatelessWidget {
                       child: const Padding(
                         padding: EdgeInsets.symmetric(vertical: 12.0),
                         child: Text(
-                          'FIND FREE ROOM ',
+                          '         VIEW FREE ROOMS       ',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 20.0,

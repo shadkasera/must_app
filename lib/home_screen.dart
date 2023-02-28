@@ -9,35 +9,36 @@ class home_screen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
           backgroundColor: Colors.grey[300],
-          appBar: AppBar( 
+          appBar: AppBar(
             backgroundColor: Colors.blue,
             elevation: 10,
-            leading: IconButton(
-              icon: const Icon(
-                Icons.menu,
+            actions: [
+              IconButton(
+                icon: const Icon(Icons.settings),
                 color: Colors.white,
+                onPressed: () {
+                   Scaffold.of(context).openDrawer();// do something when the icon is pressed
+                },
               ),
-              tooltip: 'Open must_app',
-              onPressed: () {
-                // handle the press
-              },
-            ),
-           actions: [
-          IconButton(
-            icon: const Icon(Icons.settings),
-            color: Colors.white,
-            onPressed: () {
-              // do something when the icon is pressed
-            },
-          ),
-          
-        ],
-
+            ],
             title: const Text(
               'MUST TIMETABLE',
               style: TextStyle(color: Colors.white),
             ),
             centerTitle: true,
+          ),
+          drawer: Drawer(
+            child: ListView(
+              children: const [
+                DrawerHeader(child: Text('header')),
+                ListTile(
+                  title: Text('item1'),
+                ),
+                ListTile(
+                  title: Text('item2'),
+                )
+              ],
+            ),
           ),
           body: Padding(
             padding: const EdgeInsets.all(18.0),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:must_app/home_screen.dart';
 
 // ignore: camel_case_types
 class room_screen extends StatelessWidget {
@@ -64,12 +65,30 @@ class room_screen extends StatelessWidget {
                 ),
               ),
               ListTile(
+                    leading: const Icon(
+                      Icons.home,
+                      color: Colors.white,
+                    ),
+                    title: const Text(
+                      ' HOME ',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    onTap: () {
+                     Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const home_screen(),
+                        ),
+                      );
+                    },
+                  ),
+              ListTile(
                 leading: const Icon(
-                  Icons.house_sharp,
+                  Icons.room_rounded,
                   color: Colors.white,
                 ),
                 title: const Text(
-                  'ROOMS',
+                  'ROOMS TIMETABLE',
                   style: TextStyle(color: Colors.white),
                 ),
                 onTap: () {
@@ -88,11 +107,16 @@ class room_screen extends StatelessWidget {
                   color: Colors.white,
                 ),
                 title: const Text(
-                  'LECTURERS',
+                  'LECTURERS TIMETABLE',
                   style: TextStyle(color: Colors.white),
                 ),
                 onTap: () {
-                  // code to handle item 2
+                  Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const room_screen(),
+                        ),
+                      );
                 },
               ),
               ListTile(
@@ -101,11 +125,16 @@ class room_screen extends StatelessWidget {
                   color: Colors.white,
                 ),
                 title: const Text(
-                  'PROGRAMS',
+                  'PROGRAMS TIMETABLE',
                   style: TextStyle(color: Colors.white),
                 ),
                 onTap: () {
-                  // code to handle item 1
+                Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const room_screen(),
+                        ),
+                      );
                 },
               ),
               ListTile(
@@ -114,11 +143,16 @@ class room_screen extends StatelessWidget {
                   color: Colors.white,
                 ),
                 title: const Text(
-                  'FREE ROOMS',
+                  'SEARCH FOR FREE ROOMS',
                   style: TextStyle(color: Colors.white),
                 ),
                 onTap: () {
-                  // code to handle item 1
+                  Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const room_screen(),
+                        ),
+                      );
                 },
               ),
             ],

@@ -67,15 +67,32 @@ class home_screen extends StatelessWidget {
                   ),
                   ListTile(
                     leading: const Icon(
-                      Icons.house_sharp,
+                      Icons.home,
                       color: Colors.white,
                     ),
                     title: const Text(
-                      'ROOMS',
+                      ' HOME ',
                       style: TextStyle(color: Colors.white),
                     ),
                     onTap: () {
-                      //Navigator.push(context, MaterialPageRoute(builder: context.(context) => room_screen));
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const home_screen(),
+                        ),
+                      );
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(
+                      Icons.room_rounded,
+                      color: Colors.white,
+                    ),
+                    title: const Text(
+                      'ROOMS TIMETABLE',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -90,11 +107,16 @@ class home_screen extends StatelessWidget {
                       color: Colors.white,
                     ),
                     title: const Text(
-                      'LECTURERS',
+                      'LECTURERS TIMETABLE',
                       style: TextStyle(color: Colors.white),
                     ),
                     onTap: () {
-                      // code to handle item 2
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const room_screen(),
+                        ),
+                      );
                     },
                   ),
                   ListTile(
@@ -103,11 +125,16 @@ class home_screen extends StatelessWidget {
                       color: Colors.white,
                     ),
                     title: const Text(
-                      'PROGRAMS',
+                      'PROGRAMS TIMETABLE',
                       style: TextStyle(color: Colors.white),
                     ),
                     onTap: () {
-                      // code to handle item 1
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const room_screen(),
+                        ),
+                      );
                     },
                   ),
                   ListTile(
@@ -116,11 +143,16 @@ class home_screen extends StatelessWidget {
                       color: Colors.white,
                     ),
                     title: const Text(
-                      'FREE ROOMS',
+                      'SEARCH FOR FREE ROOMS',
                       style: TextStyle(color: Colors.white),
                     ),
                     onTap: () {
-                      // code to handle item 1
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const room_screen(),
+                        ),
+                      );
                     },
                   ),
                 ],
@@ -188,7 +220,7 @@ class home_screen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: ElevatedButton(
                       onPressed: () {
-                         Navigator.push(
+                        Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) => const room_screen(),
@@ -221,7 +253,7 @@ class home_screen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: ElevatedButton(
                       onPressed: () {
-                         Navigator.push(
+                        Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) => const room_screen(),
@@ -254,7 +286,7 @@ class home_screen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: ElevatedButton(
                       onPressed: () {
-                         Navigator.push(
+                        Navigator.push(
                           context,
                           MaterialPageRoute(
                             builder: (context) => const room_screen(),

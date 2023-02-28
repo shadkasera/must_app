@@ -9,8 +9,8 @@ class home_screen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
           backgroundColor: Colors.grey[300],
-          appBar: AppBar(
-            backgroundColor: Colors.blue[400],
+          appBar: AppBar( 
+            backgroundColor: Colors.blue,
             elevation: 10,
             leading: IconButton(
               icon: const Icon(
@@ -30,6 +30,7 @@ class home_screen extends StatelessWidget {
               // do something when the icon is pressed
             },
           ),
+          
         ],
 
             title: const Text(

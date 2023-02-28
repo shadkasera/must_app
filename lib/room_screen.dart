@@ -15,9 +15,38 @@ class room_screen extends StatelessWidget {
         elevation: 10,
         actions: [
           IconButton(
-            icon: const Icon(Icons.search),
+            icon: const Icon(Icons.more_vert_sharp),
             onPressed: () {
-              // do something when the icon is pressed
+              showDialog(
+                context: context,
+                builder: (context) {
+                  return FractionallySizedBox(
+                    heightFactor: 0.97,
+                    widthFactor: 0.97,
+                    child: Container(
+                      alignment: Alignment.topRight,
+                      child: Card(
+                        elevation: 5,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            // ignore: prefer_const_literals_to_create_immutables
+                            children: [
+                              const Text(
+                                'More options',
+                                style: TextStyle(color: Colors.blue),
+                              ),
+                              const SizedBox(height: 5),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              );
             },
           ),
         ],
@@ -65,23 +94,23 @@ class room_screen extends StatelessWidget {
                 ),
               ),
               ListTile(
-                    leading: const Icon(
-                      Icons.home,
-                      color: Colors.white,
+                leading: const Icon(
+                  Icons.home,
+                  color: Colors.white,
+                ),
+                title: const Text(
+                  ' HOME ',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const home_screen(),
                     ),
-                    title: const Text(
-                      ' HOME ',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    onTap: () {
-                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const home_screen(),
-                        ),
-                      );
-                    },
-                  ),
+                  );
+                },
+              ),
               ListTile(
                 leading: const Icon(
                   Icons.room_rounded,
@@ -112,11 +141,11 @@ class room_screen extends StatelessWidget {
                 ),
                 onTap: () {
                   Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const room_screen(),
-                        ),
-                      );
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const room_screen(),
+                    ),
+                  );
                 },
               ),
               ListTile(
@@ -129,12 +158,12 @@ class room_screen extends StatelessWidget {
                   style: TextStyle(color: Colors.white),
                 ),
                 onTap: () {
-                Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const room_screen(),
-                        ),
-                      );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const room_screen(),
+                    ),
+                  );
                 },
               ),
               ListTile(
@@ -148,11 +177,11 @@ class room_screen extends StatelessWidget {
                 ),
                 onTap: () {
                   Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const room_screen(),
-                        ),
-                      );
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const room_screen(),
+                    ),
+                  );
                 },
               ),
             ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // ignore: camel_case_types
-class room_screen extends StatelessWidget {
-  const room_screen({super.key});
+class lecture_screen extends StatelessWidget {
+  const lecture_screen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +23,41 @@ class room_screen extends StatelessWidget {
             ),
             centerTitle: true,
           ),
+          body: Table(
+        // Define table properties
+        // ignore: prefer_const_literals_to_create_immutables
+        columnWidths: {
+          0: const FlexColumnWidth(1),
+          1: const FlexColumnWidth(2),
+          2: const FlexColumnWidth(1),
+        },
+        border: TableBorder.all(),
+        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+        // ignore: prefer_const_literals_to_create_immutables
+        children: [
+          // Define table rows
+          const TableRow(
+            children: [
+              Text('Column 1'),
+              Text('Column 2'),
+              Text('Column 3'),
+            ],
+          ),
+          const TableRow(
+            children: [
+              Text('Row 1, Column 1'),
+              Text('Row 1, Column 2'),
+              Text('Row 1, Column 3'),
+            ],
+          ),
+          const TableRow(
+            children: [
+              Text('Row 2, Column 1'),
+              Text('Row 2, Column 2'),
+              Text('Row 2, Column 3'),
+            ],
+          ),
+        ]),
          ));
   }
 }

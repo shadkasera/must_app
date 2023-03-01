@@ -56,6 +56,7 @@ class room_screen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
+      
       drawer: SizedBox(
         width: 200, // set a fixed width for the drawer
         child: Drawer(
@@ -86,9 +87,18 @@ class room_screen extends StatelessWidget {
                         'MUST TIMETABLE',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 16,
+                          fontSize: 13,
                         ),
                       ),
+                      // ignore: prefer_const_constructors
+                          SizedBox(height: 28),
+                          const Text(
+                            'MENU',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                            ),
+                          ),
                     ],
                   ),
                 ),

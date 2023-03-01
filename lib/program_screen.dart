@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // ignore: camel_case_types
-class room_screen extends StatelessWidget {
-  const room_screen({super.key});
+class program_screen extends StatelessWidget {
+  const program_screen({super.key});
 
   @override
   Widget build(BuildContext context) {

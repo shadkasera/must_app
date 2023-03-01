@@ -50,13 +50,22 @@ class room_screen extends StatelessWidget {
             },
           ),
         ],
-        title: const Text(
-          'MUST TIMETABLE',
-          style: TextStyle(color: Colors.white),
+        title: GestureDetector(
+          child: const Text(
+            'MUST TIMETABLE',
+            style: TextStyle(color: Colors.white),
+          ),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const home_screen(),
+              ),
+            ); 
+          },
         ),
         centerTitle: true,
       ),
-      
       drawer: SizedBox(
         width: 200, // set a fixed width for the drawer
         child: Drawer(
@@ -91,14 +100,14 @@ class room_screen extends StatelessWidget {
                         ),
                       ),
                       // ignore: prefer_const_constructors
-                          SizedBox(height: 28),
-                          const Text(
-                            'MENU',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                            ),
-                          ),
+                      SizedBox(height: 28),
+                      const Text(
+                        'MENU',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
+                      ),
                     ],
                   ),
                 ),

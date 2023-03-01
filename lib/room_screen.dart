@@ -67,7 +67,7 @@ class room_screen extends StatelessWidget {
         centerTitle: true,
       ),
       drawer: SizedBox(
-        width: 200, // set a fixed width for the drawer
+        width: 300, // set a fixed width for the drawer
         child: Drawer(
           backgroundColor: Colors.grey,
           child: ListView(

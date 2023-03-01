@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:must_app/lecturer_screen.dart';
 import 'package:must_app/room_screen.dart';
 
 // ignore: camel_case_types
@@ -57,12 +58,12 @@ class home_screen extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
               ),
               onTap: () {
-              Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const home_screen(),
-                    ),
-                  );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const lecture_screen(),
+                  ),
+                );
               },
             ),
             centerTitle: true,
@@ -168,6 +169,7 @@ class home_screen extends StatelessWidget {
                       );
                     },
                   ),
+                  
                   ListTile(
                     leading: const Icon(
                       Icons.school,

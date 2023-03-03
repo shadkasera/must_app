@@ -23,6 +23,7 @@ class program_screen extends StatelessWidget {
             ),
             centerTitle: true,
           ),
+          body: Container(),
          ));
   }
 }

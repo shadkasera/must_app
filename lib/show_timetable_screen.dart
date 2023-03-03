@@ -45,7 +45,7 @@ class ShowTimetable extends StatelessWidget {
                 child: const RotatedBox(quarterTurns: 3,
                   child: Text(
                     'MON',
-                    style: TextStyle(color: Colors.lightBlue),
+                    style: TextStyle(color: Colors.blue),
                   ),
                 ),
               ),

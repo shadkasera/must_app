@@ -215,6 +215,7 @@ class home_screen extends StatelessWidget {
             padding: const EdgeInsets.all(18.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(height: 20),
                 RichText(
@@ -252,7 +253,7 @@ class home_screen extends StatelessWidget {
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30.0),
+                            borderRadius: BorderRadius.circular(10.0),
                           ),
                         ),
                       ),
@@ -285,7 +286,7 @@ class home_screen extends StatelessWidget {
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30.0),
+                            borderRadius: BorderRadius.circular(10.0),
                           ),
                         ),
                       ),
@@ -318,7 +319,7 @@ class home_screen extends StatelessWidget {
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30.0),
+                            borderRadius: BorderRadius.circular(10.0),
                           ),
                         ),
                       ),
@@ -351,14 +352,14 @@ class home_screen extends StatelessWidget {
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30.0),
+                            borderRadius: BorderRadius.circular(10.0),
                           ),
                         ),
                       ),
                       child: const Padding(
                         padding: EdgeInsets.symmetric(vertical: 12.0),
                         child: Text(
-                          '         VIEW FREE ROOMS       ',
+                          '          VIEW FREE ROOMS       ',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 20.0,
@@ -366,13 +367,8 @@ class home_screen extends StatelessWidget {
                         ),
                       ),
                     )),
-                const SizedBox(height: 20),
-                const Divider(
-                  height: 20,
-                  thickness: 2,
-                  indent: BorderSide.strokeAlignCenter,
-                  color: Colors.black,
-                )
+              
+               
               ],
             ),
           )),

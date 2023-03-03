@@ -140,7 +140,7 @@ class home_screen extends StatelessWidget {
                       color: Colors.white,
                     ),
                     title: const Text(
-                      'ROOMS TIMETABLE',
+                      'ROOM TIMETABLE',
                       style: TextStyle(color: Colors.white),
                     ),
                     onTap: () {

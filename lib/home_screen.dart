@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:must_app/lecturer_screen.dart';
-import 'package:must_app/room_screen.dart';
 import 'package:must_app/show_timetable_screen.dart';
 
 // ignore: camel_case_types

@@ -11,7 +11,6 @@ class ShowTimetable extends StatelessWidget {
       appBar: AppBar(
         iconTheme: const IconThemeData(color: Colors.white),
         backgroundColor: Colors.blue,
-        elevation: 10,
         actions: [
           IconButton(
             icon: const Icon(Icons.search),
@@ -32,7 +31,6 @@ class ShowTimetable extends StatelessWidget {
             child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            
             Container(
               height: 40,
               width: double.infinity,
@@ -40,9 +38,10 @@ class ShowTimetable extends StatelessWidget {
               // ignore: prefer_const_constructors
               child: Padding(
                 padding: const EdgeInsets.all(
-                3,
+                  3,
                 ),
-                child: const RotatedBox(quarterTurns: 3,
+                child: const RotatedBox(
+                  quarterTurns: 3,
                   child: Text(
                     'MON',
                     style: TextStyle(color: Colors.blue),
@@ -57,9 +56,10 @@ class ShowTimetable extends StatelessWidget {
               // ignore: prefer_const_constructors
               child: Padding(
                 padding: const EdgeInsets.all(
-                3,
+                  3,
                 ),
-                child: const RotatedBox(quarterTurns: 3,
+                child: const RotatedBox(
+                  quarterTurns: 3,
                   child: Text(
                     'TUE',
                     style: TextStyle(color: Colors.blue),
@@ -74,9 +74,10 @@ class ShowTimetable extends StatelessWidget {
               // ignore: prefer_const_constructors
               child: Padding(
                 padding: const EdgeInsets.all(
-                3,
+                  3,
                 ),
-                child: const RotatedBox(quarterTurns: 3,
+                child: const RotatedBox(
+                  quarterTurns: 3,
                   child: Text(
                     'WED',
                     style: TextStyle(color: Colors.blue),
@@ -91,9 +92,10 @@ class ShowTimetable extends StatelessWidget {
               // ignore: prefer_const_constructors
               child: Padding(
                 padding: const EdgeInsets.all(
-                3,
+                  3,
                 ),
-                child: const RotatedBox(quarterTurns: 3,
+                child: const RotatedBox(
+                  quarterTurns: 3,
                   child: Text(
                     'THU',
                     style: TextStyle(color: Colors.blue),
@@ -108,9 +110,10 @@ class ShowTimetable extends StatelessWidget {
               // ignore: prefer_const_constructors
               child: Padding(
                 padding: const EdgeInsets.all(
-                3,
+                  3,
                 ),
-                child: const RotatedBox(quarterTurns: 3,
+                child: const RotatedBox(
+                  quarterTurns: 3,
                   child: Text(
                     'FRI',
                     style: TextStyle(color: Colors.blue),

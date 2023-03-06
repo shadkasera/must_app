@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:must_app/room_screen.dart';
 import 'package:must_app/show_timetable_screen.dart';
 
 // ignore: camel_case_types
@@ -135,7 +136,7 @@ class home_screen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const ShowTimetable(),
+                        builder: (context) => const Room_Screen(),
                       ),
                     );
                   },
@@ -231,7 +232,7 @@ class home_screen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ShowTimetable(),
+                          builder: (context) => const Room_Screen(),
                         ),
                       );
                     },

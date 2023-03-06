@@ -52,19 +52,9 @@ class home_screen extends StatelessWidget {
               },
             ),
           ],
-          title: GestureDetector(
-            child: const Text(
-              'MUST TIMETABLE',
-              style: TextStyle(color: Colors.white),
-            ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const lecture_screen(),
-                ),
-              );
-            },
+          title: const Text(
+            'MUST TIMETABLE',
+            style: TextStyle(color: Colors.white),
           ),
           centerTitle: true,
         ),

@@ -13,12 +13,19 @@ class Person implements Comparable<Person> {
 // ignore: camel_case_types
 class Room_Screen extends StatelessWidget {
   static const people = [
-    Person('A1'),
-    Person('A2'),
-    Person('A3'),
-    Person('A4'),
-    Person('A5'),
-    
+    Person('A1 TIMETABLE'),
+    Person('A2 TIMETABLE'),
+    Person('A3 TIMETABLE'),
+    Person('A4 TIMETABLE'),
+    Person('A5 TIMETABLE'),
+    Person('A6 TIMETABLE'),
+    Person('A7 TIMETABLE'),
+    Person('A8 TIMETABLE'),
+    Person('A9 TIMETABLE'),
+    Person('A10 TIMETABLE'),
+    Person('A11 TIMETABLE'),
+    Person('A12 TIMETABLE'),
+    Person('A13 TIMETABLE'),
   ];
   const Room_Screen({super.key});
 
@@ -37,12 +44,12 @@ class Room_Screen extends StatelessWidget {
                 delegate: SearchPage(
                   onQueryUpdate: print,
                   items: people,
-                  searchLabel: 'Search ',
+                  searchLabel: 'Search ', 
                   suggestion: const Center(
-                    child: Text('search for Rooms'),
+                    child: Text('search for a classroom timetable'),
                   ),
                   failure: const Center(
-                    child: Text('No Room found :('),
+                    child: Text('No Room found'),
                   ),
                   filter: (person) => [
                     person.name,
@@ -50,9 +57,20 @@ class Room_Screen extends StatelessWidget {
                   sort: (a, b) => a.compareTo(b),
                   builder: (person) => ListTile(
                     title: Text(person.name),
-                    trailing: const Text('GROUND'),
+                  trailing: GestureDetector(
+                onTap: () {
+                  // do something when the "view" text is clicked
+                },
+                child: const Text(
+                  'view',
+                  style: TextStyle(
+                    color: Colors.blue,
                   ),
                 ),
+              ),
+                  ),
+                  
+                ), 
               ),
             ),
           ],
@@ -69,7 +87,17 @@ class Room_Screen extends StatelessWidget {
 
             return ListTile(
               title: Text(person.name),
-              trailing: const Text('GROUND'),
+              trailing: GestureDetector(
+                onTap: () {
+                  // do something when the "view" text is clicked
+                },
+                child: const Text(
+                  'view',
+                  style: TextStyle(
+                    color: Colors.blue,
+                  ),
+                ),
+              ),
             );
           },
         ),

@@ -8,7 +8,7 @@ class home_screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
+      child: Scaffold(                                                              
         backgroundColor: Colors.grey[300],
         appBar: AppBar(
           iconTheme: const IconThemeData(color: Colors.white),

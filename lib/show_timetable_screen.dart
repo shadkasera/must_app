@@ -1,129 +1,87 @@
 import 'package:flutter/material.dart';
+import 'package:search_page/search_page.dart';
+
+class Person implements Comparable<Person> {
+  final String name, surname;
+
+  const Person(this.name, this.surname);
+
+  @override
+  int compareTo(Person other) => name.compareTo(other.name);
+}
 
 // ignore: camel_case_types
 class ShowTimetable extends StatelessWidget {
+  static const people = [
+    Person('Mike', 'Barron'),
+    Person('Todd', 'Black'),
+    Person('Ahmad', 'Edwards'),
+    Person('Anthony', 'Johnson'),
+    Person('Annette', 'Brooks'),
+    Person('shadreck', 'kasera'),
+    Person('Anthony', 'Johnson'),
+    Person('goodluck', 'Brooks'),
+    Person('shadreck', 'banda'),
+    Person('miga', 'kamanga'),
+    Person('chawer', 'kamanga'),
+  ];
   const ShowTimetable({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.white),
-        backgroundColor: Colors.blue,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.search),
-            onPressed: () {
-              // do something when the icon is pressed
-            },
-          ),
-        ],
-        title: const Text(
-          'MUST TIMETABLE',
-          style: TextStyle(color: Colors.white),
-        ),
-        centerTitle: true,
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(5.0),
-        child: Expanded(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
-              height: 40,
-              width: double.infinity,
-              color: Colors.grey[300],
-              // ignore: prefer_const_constructors
-              child: Padding(
-                padding: const EdgeInsets.all(
-                  3,
-                ),
-                child: const RotatedBox(
-                  quarterTurns: 3,
-                  child: Text(
-                    'MON',
-                    style: TextStyle(color: Colors.blue),
+      child: Scaffold(
+        appBar: AppBar(
+          iconTheme: const IconThemeData(color: Colors.white),
+          backgroundColor: Colors.blue,
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.search),
+              onPressed: () => showSearch(
+                context: context,
+                delegate: SearchPage(
+                  onQueryUpdate: print,
+                  items: people,
+                  searchLabel: 'Search ',
+                  suggestion: const Center(
+                    child: Text('search for lecturers'),
                   ),
-                ),
-              ),
-            ),
-            Container(
-              height: 40,
-              width: double.infinity,
-              color: Colors.grey[300],
-              // ignore: prefer_const_constructors
-              child: Padding(
-                padding: const EdgeInsets.all(
-                  3,
-                ),
-                child: const RotatedBox(
-                  quarterTurns: 3,
-                  child: Text(
-                    'TUE',
-                    style: TextStyle(color: Colors.blue),
+                  failure: const Center(
+                    child: Text('No person found :('),
                   ),
-                ),
-              ),
-            ),
-            Container(
-              height: 40,
-              width: double.infinity,
-              color: Colors.grey[300],
-              // ignore: prefer_const_constructors
-              child: Padding(
-                padding: const EdgeInsets.all(
-                  3,
-                ),
-                child: const RotatedBox(
-                  quarterTurns: 3,
-                  child: Text(
-                    'WED',
-                    style: TextStyle(color: Colors.blue),
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              height: 40,
-              width: double.infinity,
-              color: Colors.grey[300],
-              // ignore: prefer_const_constructors
-              child: Padding(
-                padding: const EdgeInsets.all(
-                  3,
-                ),
-                child: const RotatedBox(
-                  quarterTurns: 3,
-                  child: Text(
-                    'THU',
-                    style: TextStyle(color: Colors.blue),
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              height: 40,
-              width: double.infinity,
-              color: Colors.grey[300],
-              // ignore: prefer_const_constructors
-              child: Padding(
-                padding: const EdgeInsets.all(
-                  3,
-                ),
-                child: const RotatedBox(
-                  quarterTurns: 3,
-                  child: Text(
-                    'FRI',
-                    style: TextStyle(color: Colors.blue),
+                  filter: (person) => [
+                    person.name,
+                    person.surname,
+                  ],
+                  sort: (a, b) => a.compareTo(b),
+                  builder: (person) => ListTile(
+                    title: Text(person.name),
+                    subtitle: Text(person.surname),
+                    trailing: const Text('CSIT'),
                   ),
                 ),
               ),
             ),
           ],
-        )),
+          title: const Text(
+            'MUST TIMETABLE',
+            style: TextStyle(color: Colors.white),
+          ),
+          centerTitle: true,
+        ),
+        body: ListView.builder(
+          itemCount: people.length,
+          itemBuilder: (context, index) {
+            final person = people[index];
+
+            return ListTile(
+              title: Text(person.name),
+              subtitle: Text(person.surname),
+              trailing: const Text('CSIT'),
+            );
+          },
+        ),
       ),
-    ));
+    );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:must_app/view_table.dart';
 import 'package:search_page/search_page.dart';
 
 class Person implements Comparable<Person> {
@@ -59,6 +60,12 @@ class Room_Screen extends StatelessWidget {
                     title: Text(person.name),
                   trailing: GestureDetector(
                 onTap: () {
+                  Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ViewScreen(),
+                        ),
+                      );
                   // do something when the "view" text is clicked
                 },
                 child: const Text(
@@ -89,6 +96,12 @@ class Room_Screen extends StatelessWidget {
               title: Text(person.name),
               trailing: GestureDetector(
                 onTap: () {
+                   Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ViewScreen(),
+                        ),
+                      );
                   // do something when the "view" text is clicked
                 },
                 child: const Text(

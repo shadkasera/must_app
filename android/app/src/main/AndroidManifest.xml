@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.must_app">
    <application
-        android:label="must_app"
+        android:label="TIMETABLE"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

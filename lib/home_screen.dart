@@ -205,6 +205,7 @@ class home_screen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
+            
             children: [
               const SizedBox(height: 20),
               RichText(
